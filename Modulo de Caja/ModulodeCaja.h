@@ -4,14 +4,11 @@
 typedef class nodo
 {
 	public:
-		void insertarCajero();
-		void mostrarCajeros();
-		void modificarCajeros();
-		void eliminarCajero();
+		void InsertarCajero();
+		void MostrarCajeros();
+		void ModificarCajeros();
+		void EliminarCajero();
 		int cajero;
-
-
-
 }node;
 
 #endif // !MODULODECAJA_H

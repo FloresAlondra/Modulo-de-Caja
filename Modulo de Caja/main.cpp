@@ -17,7 +17,7 @@ int main()
 
 		switch (opcion)
 		{
-		case 1:
+			case 1:
 
 
 
