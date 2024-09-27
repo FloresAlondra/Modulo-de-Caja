@@ -5,36 +5,10 @@
 using namespace std;
 
 
-
-int main()
-{
-	node n;
-	int x = 0;
-	int opcion = 0;
-	do
-	{
-		opcion = menu();
-
-		switch (opcion)
-		{
-			case 1:
-
-
-
-
-
-
-
-
-
-		}
-
-	} while (opcion != 7);
-
-}
-
 int menu()
 {
+	Cajeros caja;
+
 	cout << "-_-_-_-_-_-Bienvenido al menu de Cajeros-_-_-_-_-_-" << endl;
 	cout << "1)Para agregar cajeros" << endl;
 	cout << "2)Para Mostrar cajeros" << endl;
@@ -44,4 +18,28 @@ int menu()
 	cout << "-_-_-_-_-_-_-_-_-_-_-_-" << endl;
 	int opcion;
 	cin >> opcion;
+
+	switch (opcion)
+	{
+		case 1:
+		{
+
+		}
+
+		case 2:
+		{
+
+		}
+
+		case 3:
+		{
+
+		}
+
+		case 4:
+		{
+			caja.EliminarCajero();
+			break;
+		}
+	}
 }

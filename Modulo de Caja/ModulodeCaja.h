@@ -8,7 +8,7 @@ typedef class nodo
 		void MostrarCajeros();
 		void ModificarCajeros();
 		void EliminarCajero();
-		int cajero;
-}node;
 
-#endif // !MODULODECAJA_H
+}Cajeros;
+
+#endif 
