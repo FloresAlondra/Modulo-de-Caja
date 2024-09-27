@@ -10,7 +10,7 @@ struct Cajero
     int Id;
     int NumCaja;
     string Nombre;
-    int ClientesPendientes;
+
     Cajero* atras;
     Cajero* siguiente;
 };
@@ -75,11 +75,11 @@ void EliminarCajero()
     }
 
     
-    if (cajero->ClientesPendientes > 0) //Si hay clientes pendientes
-    {
-        cout << "Este cajero no se puede eliminar porque cuenta con pendientes"<<endl;
-        return;s
-    }
+   // if (cajero->ClientesPendientes > 0) //Si hay clientes pendientes
+   // {
+       // cout << "Este cajero no se puede eliminar porque cuenta con pendientes"<<endl;
+        //return;
+    //}
 
    //--------Actualizacion de Punteros---------------
     if (cajero == inicio) inicio = cajero->siguiente;
@@ -92,4 +92,43 @@ void EliminarCajero()
     delete cajero;
 
     cout << "El cajero se ha eliminado correctammente!!" << endl;
+}
+
+void MenuCajero()
+{
+    Cajeros caja;
+
+    cout << "-_-_-_-_-_-Bienvenido al menu de Cajeros-_-_-_-_-_-" << endl;
+    cout << "1)Para agregar cajeros" << endl;
+    cout << "2)Para Mostrar cajeros" << endl;
+    cout << "3)Para Eliminar cajeros" << endl;
+    cout << "4)Para Modificar cajeros" << endl;
+    cout << "5)Para volver al menu principal" << endl;
+    cout << "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-" << endl;
+    int opcion;
+    cin >> opcion;
+
+    switch (opcion)
+    {
+        case 1:
+        {
+
+        }
+
+        case 2:
+        {
+
+        }
+
+        case 3:
+        {
+
+        }
+
+        case 4:
+        {
+            caja.EliminarCajero();
+            break;
+        }
+    }
 }

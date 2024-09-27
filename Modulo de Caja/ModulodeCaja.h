@@ -8,6 +8,7 @@ typedef class nodo
 		void MostrarCajeros();
 		void ModificarCajeros();
 		void EliminarCajero();
+		void MenuCajero();
 
 }Cajeros;
 
