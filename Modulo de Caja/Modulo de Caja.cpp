@@ -51,6 +51,11 @@ void modificarCajero()
 
 void EliminarCajero()
 {
+    if (Cajas.empty())
+    {
+        cout << "No existe ningun cajero a Eliminar" << endl;
+    }
+    
     Cajero* cajero = inicio;
 
     int _id;
@@ -63,7 +68,7 @@ void EliminarCajero()
     }
 
   
-    if (!cajero)  //Si este no existe 
+    if (!cajero)  //Si el ID de este no existe 
     {
         cout << "El cajero no se encuentra en el sistema" << endl;
         return;
@@ -73,10 +78,10 @@ void EliminarCajero()
     if (cajero->ClientesPendientes > 0) //Si hay clientes pendientes
     {
         cout << "Este cajero no se puede eliminar porque cuenta con pendientes"<<endl;
-        return;
+        return;s
     }
 
-   
+   //--------Actualizacion de Punteros---------------
     if (cajero == inicio) inicio = cajero->siguiente;
     if (cajero == fin) fin = cajero->atras;
     if (cajero->atras) cajero->atras->siguiente = cajero->siguiente;

@@ -15,7 +15,7 @@ int menu()
 	cout << "3)Para Eliminar cajeros" << endl;
 	cout << "4)Para Modificar cajeros" << endl;
 	cout << "5)Para volver al menu principal" << endl;
-	cout << "-_-_-_-_-_-_-_-_-_-_-_-" << endl;
+	cout << "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-" << endl;
 	int opcion;
 	cin >> opcion;
 
