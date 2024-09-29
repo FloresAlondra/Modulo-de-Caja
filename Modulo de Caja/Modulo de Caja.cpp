@@ -72,6 +72,8 @@ void EliminarCajero()
     {
         cout << "El cajero no se encuentra en el sistema" << endl;
         return;
+
+
     }
 
     
