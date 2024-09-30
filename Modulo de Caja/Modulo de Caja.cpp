@@ -7,36 +7,76 @@ using namespace std;
 
 struct Cajero
 {
-    int Id;
-    int NumCaja;
-    string Nombre;
-    int ClientesPendientes;
+    int id=0;
+    int NumCaja=0;
+    string Nombre=0;
+    int ClientesPendientes=0;
     Cajero* atras;
     Cajero* siguiente;
 };
-
+Cajero* lista = NULL;
 Cajero* inicio = NULL;
 Cajero* fin = NULL;
-
+int cantCa = 0;
 vector<int> Cajas;
 
 
+Cajero* actual = lista;
+
+bool buscarCaje(int id) {
+    Cajero* actual = lista;
+    while (actual) {
+        if (actual->id == id) {
+            return true;
+        }//if
+        actual = actual->siguiente;
+    }//while
+    return false;
+}//metodo
+
+int contCaje() {
+    int cont = 0;
+    Cajero* actual = actual;
+    while (actual) {
+        cont++;
+        actual = actual->siguiente;
+
+    }//while
+    return cont;
+}//int 
 
 void InsertarCajero()
 {
-    
+   
 
 
 }
 
 
-
-
-void MostrarCajeros()
+void MostrarCajeros(Cajero*& lista, int id, string nombre)
 {
+    if (buscarCaje(id)) {
+        cout << "El cajero Ya esta ingresado " << endl;
+    }
+    if (cantCa >= 6) {
+        cout << "No se pueden ingresar mas cajeros" << endl;
+    }
 
+    Cajero* nuevo = new Cajero();
+    nuevo->id = id;
+    nuevo->Nombre = nombre;
+    nuevo->siguiente; 
 
+    if (lista != NULL) {
+        nuevo->siguiente = lista;
+        lista->atras = nuevo;
 
+    }
+    lista = nuevo;
+    cantCa++;
+    cout << "ID Cajero:" << id << endl;
+    cout << "Nombre de cajeros:" << nombre << endl;
+    cout << "El cajero ha sido ingresado" << endl;
 }
 
 
@@ -78,7 +118,7 @@ void EliminarCajero()
     if (cajero->ClientesPendientes > 0) //Si hay clientes pendientes
     {
         cout << "Este cajero no se puede eliminar porque cuenta con pendientes"<<endl;
-        return;s
+        return;
     }
 
    //--------Actualizacion de Punteros---------------

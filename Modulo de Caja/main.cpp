@@ -8,6 +8,8 @@ using namespace std;
 int menu()
 {
 	Cajeros caja;
+	int id;
+	string nombre;
 
 	cout << "-_-_-_-_-_-Bienvenido al menu de Cajeros-_-_-_-_-_-" << endl;
 	cout << "1)Para agregar cajeros" << endl;
@@ -23,6 +25,11 @@ int menu()
 	{
 		case 1:
 		{
+			cout << "ingrese el id del cajero " << endl;
+			cin >> id;
+			cout << "ingrese el nombre del cajero" << endl;
+			cin >> nombre;
+			void InsertarCajero();
 
 		}
 
@@ -41,5 +48,7 @@ int menu()
 			caja.EliminarCajero();
 			break;
 		}
+
 	}
+	return 0;
 }
