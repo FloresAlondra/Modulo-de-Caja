@@ -14,6 +14,7 @@ struct Cajero
     Cajero* atras;
     Cajero* siguiente;
 };
+
 Cajero* lista = NULL;
 Cajero* inicio = NULL;
 Cajero* fin = NULL;
@@ -23,25 +24,32 @@ vector<int> Cajas;
 
 Cajero* actual = lista;
 
-bool buscarCaje(int id) {
+bool buscarCaje(int id)
+{
     Cajero* actual = lista;
-    while (actual) {
-        if (actual->id == id) {
+    while (actual)
+    {
+        if (actual->id == id)
+        {
             return true;
         }//if
         actual = actual->siguiente;
     }//while
-    return false;
+        return false;
 }//metodo
 
-int contCaje() {
+int contCaje() 
+{
     int cont = 0;
     Cajero* actual = actual;
-    while (actual) {
+
+    while (actual)
+    {
         cont++;
         actual = actual->siguiente;
 
     }//while
+
     return cont;
 }//int 
 
@@ -102,7 +110,7 @@ void EliminarCajero()
     cout << "Ingrese el ID del cajero que desea eliminar" << endl;
     cin >> _id;
 
-    while (cajero && cajero->Id != _id)     // Buscar el ID del cajero
+    while (cajero && cajero->id != _id)     // Buscar el ID del cajero
     {
         cajero = cajero->siguiente;
     }
@@ -113,11 +121,12 @@ void EliminarCajero()
         cout << "El cajero no se encuentra en el sistema" << endl;
         return;
 
-    
+    }
+
     if (cajero->ClientesPendientes > 0) //Si hay clientes pendientes
     {
         cout << "Este cajero no se puede eliminar porque cuenta con pendientes"<<endl;
-        return;s
+        return;
     }
 
     
