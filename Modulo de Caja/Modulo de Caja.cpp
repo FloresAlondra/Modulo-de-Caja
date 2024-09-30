@@ -63,10 +63,12 @@ void InsertarCajero()
 
 void MostrarCajeros(Cajero*& lista, int id, string nombre)
 {
-    if (buscarCaje(id)) {
+    if (buscarCaje(id))
+    {
         cout << "El cajero Ya esta ingresado " << endl;
     }
-    if (cantCa >= 6) {
+    if (cantCa >= 6) 
+    {
         cout << "No se pueden ingresar mas cajeros" << endl;
     }
 
@@ -75,11 +77,13 @@ void MostrarCajeros(Cajero*& lista, int id, string nombre)
     nuevo->Nombre = nombre;
     nuevo->siguiente; 
 
-    if (lista != NULL) {
+    if (lista != NULL)
+    {
         nuevo->siguiente = lista;
         lista->atras = nuevo;
 
     }
+
     lista = nuevo;
     cantCa++;
     cout << "ID Cajero:" << id << endl;
