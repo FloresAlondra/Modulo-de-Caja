@@ -53,7 +53,7 @@ int contCaje()
     return cont;
 }//int 
 
-void InsertarCajero()
+void MostrarCajero()
 {
    
 
@@ -61,7 +61,7 @@ void InsertarCajero()
 }
 
 
-void MostrarCajeros(Cajero*& lista, int id, string nombre)
+void InsertarCajero(Cajero*& lista, int id, string nombre)
 {
     if (buscarCaje(id))
     {
